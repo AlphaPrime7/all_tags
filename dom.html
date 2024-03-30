@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>All tags</title>
+</head>
+ 
+<body>
+    <h1>Getting all tags used by the developer</h1>
+    <p>DOM get all tags</p>
+    <script>
+        
+        //break down the dictionary
+        //https://stackoverflow.com/questions/37615086/how-to-filter-a-dictionary-by-value-in-javascript
+        //https://masteringjs.io/tutorials/fundamentals/filter-key
+        //the link has some good pointers
+        const allhtmltags = document.getElementsByTagName("*");
+        var all_keys = Object.keys(allhtmltags);
+        var all_values = Object.values(allhtmltags);
+        var all_entries = Object.values(allhtmltags);
+
+        arr = []
+        target_tags = ['body','head']
+            for(j in all_values){
+                if(j in target_tags){
+                    arr.push(allhtmltags[j])
+                }
+            }
+    
+        console.log(all_keys)
+        console.log(all_values)
+        console.log(arr)
+
+    </script>
+</body>
+</html>
